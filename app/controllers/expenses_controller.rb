@@ -1,4 +1,4 @@
-class ExpensesController < ApplicationController
+class ExpensesController < ActionController::Base
 	before_action :authenticate_user!
   def index
   	palabra = "%#{params[:concept]}%"
