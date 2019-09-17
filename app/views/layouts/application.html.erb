@@ -15,14 +15,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">    
         <ul class="navbar-nav ml-auto">
-          <% if user_signed_in? %>
           <li><a href="#">Gastos (current)</a></li>
-          <%= link_to "Salir", destroy_user_session_path, :method => :delete %>  
-          <% else %>
-          <li><%= link_to "Regístrate", new_user_session_path %></li>
-          <li><%= link_to "Login", new_user_registration_path %></li>
-          <% end %>
         </ul>
+        <% if user_signed_in? %>
+        <%= link_to "Salir", destroy_user_session_path, :method => :delete %>  
+        <% else %>
+        <%= link_to "Regístrate", new_user_session_path %>
+        <%= link_to "Login", new_user_registration_path %>
+        <% end %>
       </div>
     </div>
   </nav>
