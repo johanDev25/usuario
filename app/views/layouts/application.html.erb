@@ -17,7 +17,7 @@
         <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
         <li><a href="#">Gastos (current)</a></li>
-        <%= link_to "Salir", destroy_user_session_path, :method => :delete %>  
+        <li><%= link_to "Salir", destroy_user_session_path, :method => :delete %></li>   
         <% end %>
         </ul>
       </div>
