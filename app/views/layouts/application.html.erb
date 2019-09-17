@@ -13,12 +13,10 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02"> 
-        <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse">    
         <% if user_signed_in? %>
-        <li><%= link_to "Salir", destroy_user_session_path, :method => :delete %></li>   
+        <%= link_to "Salir", destroy_user_session_path, :method => :delete %>   
         <% end %>
-        </ul>
       </div>
     </div>
   </nav>
